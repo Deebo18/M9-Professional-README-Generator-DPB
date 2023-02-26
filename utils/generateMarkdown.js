@@ -40,11 +40,16 @@ function generateMarkdown(data) {
   ## Table-of-Contents
 
   * [Description](#description)
+
   * [Installation](#installation)
+
   * [Usage](#usage)
   ${renderLicenseLink(data.license)}
+
   * [Contributing](#contributing)
+
   * [Tests](#tests)
+
   * [Questions](#questions)
 
 
@@ -52,7 +57,9 @@ function generateMarkdown(data) {
 
   Run the following command to install dependencies:
 
+  \`\`\`
   ${data.installation}
+  \`\`\`
 
   ## [Usage]
 
@@ -68,8 +75,10 @@ function generateMarkdown(data) {
 
   Run test using the following command:
 
+  \`\`\`
   ${data.test}
-
+  \`\`\`
+  
   ## [Questions]
 
   Please contact me using the following links for any additional questions:
