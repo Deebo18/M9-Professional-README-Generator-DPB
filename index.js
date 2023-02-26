@@ -9,27 +9,27 @@ const questions = [
     {
         type: 'input',
         name: 'userName',
-        message: 'Enter your GitHub username.',
+        message: 'Enter your GitHub username:',
     },
     {
         type: 'input',
         name: 'email',
-        message: 'Enter your email address.',
+        message: 'Enter your email address:',
     },
     {
         type: 'input',
         name: 'title',
-        message: 'Enter the name of your project.',
+        message: 'Enter the name of your project:',
     },
     {
         type: 'input',
         name: 'description',
-        message: 'Please provide a desciprtion of your project.',
+        message: 'Please provide a description of your project:',
     },
     {
         type: 'list',
         name: 'license',
-        message: 'Please select a license for your project.',
+        message: 'Please select a license for your project:',
         choices: ['APACHE 2.0', 'BSD 3', 'GPL 3.0', 'MIT', 'None'],
     },
     {
@@ -47,12 +47,12 @@ const questions = [
     {
         type: 'input',
         name: 'usage',
-        message: 'Please provide instructions for use',
+        message: 'Please provide instructions for use:',
     },
     {
         type: 'input',
         name: 'contributing',
-        message: 'Please provide user(s) with additional information on how to contribute to the repo.',
+        message: 'Please provide user(s) with additional information on how to contribute to the repo:',
     },
 ];
 
@@ -65,7 +65,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions).then((inquirerResponses) => {
         console.log('Generating README...');
-        writeToFile('README.md', generateMarkdown({ ...inquirerResponses}));
+        writeToFile('generateREADME.md', generateMarkdown({ ...inquirerResponses}));
     });
 }
 
